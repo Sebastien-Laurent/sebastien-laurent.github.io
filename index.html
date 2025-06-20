@@ -3,67 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>S. Laurent Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/monaspace/1.0.0/monaspace.css" rel="stylesheet">
     <style>
         :root {
-            --background-dark: #121212;
-            --text-light: #e0e0e0;
-            --text-accent: #00bcd4; /* A techy blue/cyan */
-            --card-background: #1e1e1e;
+
+            --background-dark: #000000; /* Pure black for stark contrast like example */
+            --text-light: #e0e0e0; /* Main light text color */
+            --text-accent: #5082d7; /* Your current accent blue */
+            --card-background: #161b22; /* Card background */
             --border-color: #333;
-            --hover-accent: #00a8bb;
+            --hover-accent: #3b6ece; /* A slightly darker blue for hover */
+
+            --hero-background: #0e1116; /* Dark background for hero section */
+            --hero-text-primary: #ffffff; /* Brighter white for main title */
+            --hero-text-secondary: #a0a0a0; /* Slightly darker for tagline */
+            --button-bg: #e0e0e0; /* Light button background */
+            --button-text: #000000; /* Dark text for light button */
+            --button-border: #333; /* Border for secondary button */
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
             margin: 0;
-            background-color: var(--background-dark);
+            background-color: var(--background-dark); /* Use pure black for overall body background */
             color: var(--text-light);
             line-height: 1.6;
             scroll-behavior: smooth;
         }
 
-        /* --- Header/Navigation --- */
-        header {
-            background-color: var(--card-background);
-            padding: 1rem 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        #hero {
             display: flex;
-            justify-content: center; /* Center the title */
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            min-height: 100vh; /* Takes full viewport height */
+            background-color: var(--hero-background); /* Specific background for hero */
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box; /* Include padding in height calculation */
         }
 
-        .site-title {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1.8rem;
-            color: var(--text-accent);
+        .profile-picture {
+            width: 180px; 
+            height: 180px; 
+            border-radius: 50%; 
+            object-fit: cover; /* Ensures image covers the circle */
+            border: 3px solid var(--text-accent);
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.3); /* Subtle glow */
+            transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+        }
+
+            .profile-picture:hover {
+                transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+
+        .hero-title {
+            font-size: 3.5rem; /* Larger font for main title */
+            color: var(--hero-text-primary); /* Brighter white */
+            margin-bottom: 20px;
+            font-weight: 700; /* Bold */
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem; /* Slightly larger for tagline */
+            color: var(--hero-text-secondary); /* Darker grey */
+            max-width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px; /* Space between buttons */
+            flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+            justify-content: center;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px; /* Slightly more rounded buttons */
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
         }
 
-        /* --- Main Content Layout --- */
+            .hero-button.primary {
+                background-color: var(--text-accent); /* Accent color for primary button */
+                color: var(--button-text); /* Dark text on primary button */
+                border: 2px solid var(--text-accent);
+            }
+
+                .hero-button.primary:hover {
+                    background-color: var(--hover-accent);
+                    border-color: var(--hover-accent);
+                    transform: translateY(-3px);
+                }
+
+            .hero-button.secondary {
+                background-color: transparent;
+                color: var(--text-light); /* Light text for secondary button */
+                border: 2px solid var(--border-color); /* Subtle border for secondary button */
+            }
+
+                .hero-button.secondary:hover {
+                    background-color: rgba(255, 255, 255, 0.05); /* Slight background on hover */
+                    border-color: var(--text-light); /* Light border on hover */
+                    transform: translateY(-3px);
+                }
+
         .container {
             max-width: 1100px;
-            margin: 40px auto;
+            margin: 80px auto; /* Increased top margin to separate from hero */
             padding: 0 20px;
         }
 
-        h1 {
-            font-family: 'Roboto Mono', monospace;
+        .section-title {
+            font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
             font-size: 2.8rem;
             text-align: center;
-            color: var(--text-accent);
+            color: var(--text-accent); /* Use accent for section titles */
             margin-bottom: 60px;
-            text-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
         }
 
-        /* --- Project Grid --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,10 +147,10 @@
             flex-direction: column;
         }
 
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--hover-accent);
-        }
+            .project-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--hover-accent);
+            }
 
         .project-media {
             width: 100%;
@@ -96,13 +162,13 @@
             align-items: center;
         }
 
-        .project-media img,
-        .project-media video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures media fills the space without distortion */
-            display: block;
-        }
+            .project-media img,
+            .project-media video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures media fills the space without distortion */
+                display: block;
+            }
 
         .project-content {
             padding: 20px;
@@ -111,25 +177,25 @@
             flex-direction: column;
         }
 
-        .project-content h3 {
-            font-family: 'Roboto Mono', monospace;
-            color: var(--text-accent);
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.5rem;
-        }
+            .project-content h3 {
+                font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+                color: var(--text-accent);
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
 
-        .project-content p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            margin-bottom: 15px;
-            flex-grow: 1; /* Pushes button to bottom */
-        }
+            .project-content p {
+                font-size: 0.95rem;
+                color: var(--text-light);
+                margin-bottom: 15px;
+                flex-grow: 1; /* Pushes button to bottom */
+            }
 
         .project-link {
             display: inline-block;
             background-color: var(--text-accent);
-            color: var(--background-dark);
+            color: var(--button-text); /* Ensure dark text on accent background */
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
@@ -139,12 +205,11 @@
             align-self: flex-start; /* Align link to start within flex column */
         }
 
-        .project-link:hover {
-            background-color: var(--hover-accent);
-            transform: translateY(-2px);
-        }
+            .project-link:hover {
+                background-color: var(--hover-accent);
+                transform: translateY(-2px);
+            }
 
-        /* --- Footer --- */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -156,7 +221,26 @@
 
         /* --- Responsive Design --- */
         @media (max-width: 768px) {
-            h1 {
+            .hero-title {
+                font-size: 2.5rem; /* Smaller on mobile */
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column; /* Stack buttons vertically */
+                gap: 15px;
+                width: 80%; /* Buttons take more width */
+            }
+
+            .hero-button {
+                width: 100%; /* Full width buttons */
+                box-sizing: border-box; /* Include padding in width */
+            }
+
+            .section-title {
                 font-size: 2.2rem;
                 margin-bottom: 40px;
             }
@@ -171,15 +255,20 @@
         }
 
         @media (max-width: 480px) {
-            header {
-                padding: 0.8rem 15px;
+            .hero-title {
+                font-size: 2rem;
             }
 
-            .site-title {
-                font-size: 1.5rem;
+            .hero-subtitle {
+                font-size: 0.9rem;
             }
 
-            h1 {
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section-title {
                 font-size: 1.8rem;
             }
 
@@ -199,18 +288,26 @@
     </style>
 </head>
 <body>
-    <header>
-        <a href="#" class="site-title">My Projects</a>
-    </header>
+    <section id="hero">
+        <img src="Media/ProfilePic.jpeg" alt="S. Laurent Profile Picture" class="profile-picture">
+        <h1 class="hero-title">Hi, I'm Sébastien </h1>
+        <p class="hero-subtitle">
+            Data scientist | Game Developer | Entrepreneur
+        </p>
+        <div class="hero-buttons">
+            <a href="#contact" class="hero-button primary">Get in Touch</a>
+            <a href="#projects-section" class="hero-button secondary">View Projects</a>
+        </div>
+    </section>
 
     <div class="container">
-        <h1>Showcasing My Work</h1>
+        <h1 class="section-title" id="projects-section">Featured Projects</h1>
 
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-media">
                     <img src="Media/LushaScreenshot.png" alt="Lusha Screenshot">
-                    </div>
+                </div>
                 <div class="project-content">
                     <h3>Lusha</h3>
                     <p>Our game developed to help ADHD kids thrive</p>
@@ -231,7 +328,7 @@
 
             <div class="project-card">
                 <div class="project-media">
-                    <img src="Media/BobGatheringCraftingAndBuilding.mov" alt="Agent Screenshot">
+                    <img src="Media/BobGatheringCraftingAndBuilding.mov" alt="Agent Screenshot - Please convert to MP4 if video">
                 </div>
                 <div class="project-content">
                     <h3>Survival simulation for AI agents</h3>
@@ -251,11 +348,20 @@
                 </div>
             </div>
 
-            </div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2025 LAURENT Sébastien. All rights reserved.</p>
     </footer>
+
+    <script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });</script>
 </body>
 </html>

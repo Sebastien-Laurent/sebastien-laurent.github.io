@@ -3,37 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --background-dark: #121212;
+            --text-light: #e0e0e0;
+            --text-accent: #00bcd4; /* A techy blue/cyan */
+            --card-background: #1e1e1e;
+            --border-color: #333;
+            --hover-accent: #00a8bb;
+        }
+
         body {
-            font-family: sans-serif;
-            margin: 20px;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
-        h1, p {
+
+        /* --- Header/Navigation --- */
+        header {
+            background-color: var(--card-background);
+            padding: 1rem 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center; /* Center the title */
+            align-items: center;
+        }
+
+        .site-title {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8rem;
+            color: var(--text-accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* --- Main Content Layout --- */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.8rem;
             text-align: center;
+            color: var(--text-accent);
+            margin-bottom: 60px;
+            text-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
         }
-        .project {
-            border: 1px solid #ccc;
-            padding: 15px;
+
+        /* --- Project Grid --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--hover-accent);
+        }
+
+        .project-media {
+            width: 100%;
+            height: 220px; /* Fixed height for media */
+            overflow: hidden;
+            background-color: #000; /* Placeholder for loading */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project-media img,
+        .project-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures media fills the space without distortion */
+            display: block;
+        }
+
+        .project-content {
+            padding: 20px;
+            flex-grow: 1; /* Allows content to take up remaining space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-family: 'Roboto Mono', monospace;
+            color: var(--text-accent);
+            margin-top: 0;
             margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .project-content p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            flex-grow: 1; /* Pushes button to bottom */
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: var(--text-accent);
+            color: var(--background-dark);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            align-self: flex-start; /* Align link to start within flex column */
+        }
+
+        .project-link:hover {
+            background-color: var(--hover-accent);
+            transform: translateY(-2px);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr; /* Stack projects on smaller screens */
+            }
+
+            .project-card {
+                margin: 0 10px; /* Add some side margin for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 0.8rem 15px;
+            }
+
+            .site-title {
+                font-size: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 0 15px;
+            }
+
+            .project-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .project-content p {
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Portfolio!</h1>
-    <p>Here you'll find some of my projects and skills.</p>
+    <header>
+        <a href="#" class="site-title">My Projects</a>
+    </header>
 
-    <div class="project">
-        <h3>Project 1: Awesome Web App</h3>
-        <p>A brief description of the project and the technologies used.</p>
-        <a href="[link to project or repository]">View Project</a>
+    <div class="container">
+        <h1>Showcasing My Work</h1>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="https://via.placeholder.com/600x400?text=Project+1+Image" alt="Awesome Web App Screenshot">
+                    </div>
+                <div class="project-content">
+                    <h3>Awesome Web App</h3>
+                    <p>This project is a dynamic web application built using React and Node.js. It features user authentication, a real-time data dashboard, and integration with a third-party API. Explore its sleek interface and robust backend.</p>
+                    <a href="https://github.com/yourusername/awesome-web-app" target="_blank" class="project-link">View Code & Demo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="https://via.placeholder.com/600x400?text=Project+2+Image" alt="Data Analysis Script Screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>Data Analysis & Visualization</h3>
+                    <p>A Python-based script for analyzing large datasets and generating interactive visualizations. It utilizes Pandas for data manipulation, Matplotlib/Seaborn for plotting, and generates insightful reports. Perfect for understanding complex trends.</p>
+                    <a href="https://github.com/yourusername/data-analysis-script" target="_blank" class="project-link">View Repository</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="https://via.placeholder.com/600x400?text=Project+3+Image" alt="Mobile Game Screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>Mobile Game Prototype (Unity)</h3>
+                    <p>Developed a minimalist 2D mobile game prototype using Unity and C#. This project explores game mechanics, UI/UX design for mobile platforms, and performance optimization. Dive into a quick play session!</p>
+                    <a href="https://github.com/yourusername/mobile-game-prototype" target="_blank" class="project-link">View Code</a>
+                </div>
+            </div>
+
+            </div>
     </div>
 
-    <div class="project">
-        <h3>Project 2: Data Analysis Script</h3>
-        <p>Details about the data analysis project and the tools involved.</p>
-        <a href="[link to project or repository]">View Repository</a>
-    </div>
-
-    </body>
+    <footer>
+        <p>&copy; 2025 [Your Name/Alias]. All rights reserved.</p>
+    </footer>
+</body>
 </html>

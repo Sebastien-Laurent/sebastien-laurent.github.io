@@ -7,16 +7,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/monaspace/1.0.0/monaspace.css" rel="stylesheet">
     <style>
         :root {
-
-            --background-dark: #000000; /* Pure black for stark contrast like example */
-            --text-light: #e0e0e0; /* Main light text color */
+            --background-dark: #ffffff; /* #000000Pure black for stark contrast like example */
+            --text-light: #000000; /* Main light text color */
             --text-accent: #5082d7; /* Your current accent blue */
-            --card-background: #161b22; /* Card background */
-            --border-color: #333;
+            --card-background: #f5f5f5; /* #161b22Card background */
+            --border-color: #d4d4d4;
+            --border-color-hl: #5082d7;
             --hover-accent: #3b6ece; /* A slightly darker blue for hover */
 
-            --hero-background: #0e1116; /* Dark background for hero section */
-            --hero-text-primary: #ffffff; /* Brighter white for main title */
+            --hero-background: #ffffff; /* #0e1116Dark background for hero section */
+            --hero-text-primary: #000000; /* #ffffffBrighter white for main title */
             --hero-text-secondary: #a0a0a0; /* Slightly darker for tagline */
             --button-bg: #e0e0e0; /* Light button background */
             --button-text: #000000; /* Dark text for light button */
@@ -37,7 +37,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh; /* Takes full viewport height */
+            min-height: 30vh; /* Takes full viewport height */
             background-color: var(--hero-background); /* Specific background for hero */
             text-align: center;
             padding: 20px;
@@ -141,7 +141,7 @@
             border: 1px solid var(--border-color);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);*/
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -149,7 +149,8 @@
 
             .project-card:hover {
                 transform: translateY(-8px);
-                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--hover-accent);
+                border: 1px solid var(--border-color-hl);
+                /*box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 20px var(--hover-accent);*/
             }
 
         .project-media {
@@ -292,7 +293,7 @@
         <img src="Media/ProfilePic.jpeg" alt="S. Laurent Profile Picture" class="profile-picture">
         <h1 class="hero-title">Hi, I'm Sébastien </h1>
         <p class="hero-subtitle">
-            Data scientist | Game Developer | Entrepreneur
+            Game development | Data science | Tooling | Quantum physics
         </p>
         <div class="hero-buttons">
             <a href="#contact" class="hero-button primary">Get in Touch</a>

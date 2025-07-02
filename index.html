@@ -4,32 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S. Laurent Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/monaspace/1.0.0/monaspace.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --background-dark: #ffffff; 
-            --text-light: #000000; 
-            --text-accent: #5082d7;
-            --card-background: #f5f5f5; 
+            --background-dark: #000000;
+            --text-light: #ffffff;
+            --text-accent: #80b2f7;
+            --card-background: #222222;
             --border-color: #d4d4d4;
             --border-color-hl: #5082d7;
             --hover-accent: #3b6ece;
 
-            --hero-background: #ffffff;
-            --hero-text-primary: #000000;
-            --hero-text-secondary: #a0a0a0; 
+            --hero-background: #000000;
+            --hero-text-primary: #ffffff;
+            --hero-text-secondary: #a0a0a0;
             --button-bg: #e0e0e0;
             --button-text: #000000;
             --button-border: #333;
         }
 
         body {
-            font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+            font-family: 'Inter', sans-serif; /* Apply Inter as the primary font for the whole body */
             margin: 0;
-            background-color: var(--background-dark); /* Use pure black for overall body background */
+            background-color: var(--background-dark);
             color: var(--text-light);
             line-height: 1.6;
             scroll-behavior: smooth;
+        }
+
+        /* If you still want Monaspace for specific elements like code or specific headings: */
+        code, pre, /* Example: Keep Monaspace for project titles or code blocks */
+            font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+        }
+
+        /* Apply Inter to your hero section elements specifically */
+        .hero-title, .hero-subtitle, .hero-button {
+            font-family: 'Inter', sans-serif;
         }
 
         #hero {
@@ -67,9 +79,9 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem; /* Slightly larger for tagline */
+            font-size: 2rem; /* Slightly larger for tagline */
             color: var(--hero-text-secondary); /* Darker grey */
-            max-width: 700px;
+            max-width: 1900px;
             margin-bottom: 40px;
             line-height: 1.8;
         }
@@ -122,12 +134,12 @@
         }
 
         .section-title {
-            font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+            /*font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;*/
             font-size: 2.8rem;
             text-align: center;
             color: var(--text-accent); /* Use accent for section titles */
             margin-bottom: 60px;
-            text-shadow: 0 0 10px rgba(0, 188, 212, 0.2);
+            /*text-shadow: 0 0 10px rgba(0, 188, 212, 0.2);*/
         }
 
         .projects-grid {
@@ -227,18 +239,7 @@
             }
 
             .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column; /* Stack buttons vertically */
-                gap: 15px;
-                width: 80%; /* Buttons take more width */
-            }
-
-            .hero-button {
-                width: 100%; /* Full width buttons */
-                box-sizing: border-box; /* Include padding in width */
+                font-size: 1.5rem;
             }
 
             .section-title {
@@ -324,15 +325,27 @@
             </div>
 
             <div class="project-card">
-                <div class="project-media">
-                    <img src="Media/BobGatheringCraftingAndBuilding.mov" alt="Agent Screenshot - Please convert to MP4 if video">
-                </div>
+                <video controls muted loop preload="metadata" poster="Media/BobGatheringCraftingAndBuildingPoster.jpg">
+                    <source src="Media/BobGatheringCraftingAndBuilding.mp4" type="video/mp4">
+                </video>
                 <div class="project-content">
                     <h3>Survival simulation for AI agents</h3>
                     <p>A prototype unity simulation where AI agents have to survive in a remote land by gathering ressource, crafting equipment and building a shelter. Agents are powered using the OpenAI API. </p>
                     <a href="https://github.com/yourusername/mobile-game-prototype" target="_blank" class="project-link">More details</a>
                 </div>
             </div>
+            
+            <div class="project-card">
+                <video controls muted loop preload="metadata" poster="Media/LucyProgramSimulationExamplePoster.jpg">
+                    <source src="Media/LucyProgramSimulationExample.mp4" type="video/mp4">
+                </video>
+                <div class="project-content">
+                    <h3>Animation generation using deep reinforcement learning</h3>
+                    <p>An application of deep reinforcement learning to teach an humanoid agent how to walk in order to generate animations adapted to the environment.</p>
+                    <a href="https://github.com/yourusername/mobile-game-prototype" target="_blank" class="project-link">More details</a>
+                </div>
+            </div>
+
 
             <div class="project-card">
                 <div class="project-media">
@@ -341,6 +354,17 @@
                 <div class="project-content">
                     <h3>In game behavior as a marker for ADHD</h3>
                     <p> A R&D initiative to evaluate the feasibility of designing a serie of gamified tests as a tool to assess the ADHD "level" of the user</p>
+                    <a href="https://github.com/yourusername/mobile-game-prototype" target="_blank" class="project-link">More details</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-media">
+                    <img src="Media/vapPCA.png" alt="Data Screenshot">
+                </div>
+                <div class="project-content">
+                    <h3>PCA applied to an HPC simulation of counterflowing superfluids</h3>
+                    <p> PCA unravels the complex dynamics at play when two superfluids are counterflowing at large velocity</p>
                     <a href="https://github.com/yourusername/mobile-game-prototype" target="_blank" class="project-link">More details</a>
                 </div>
             </div>

@@ -1,0 +1,381 @@
+﻿:root {
+    --background-dark: #000000;
+    --text-light: #ffffff;
+    --text-accent: #80b2f7;
+    --card-background: #222222;
+    --border-color: #d4d4d4;
+    --border-color-hl: #5082d7;
+    --hover-accent: #3b6ece;
+    --hero-background: #000000;
+    --hero-text-primary: #ffffff;
+    --hero-text-secondary: #a0a0a0;
+    --button-bg: #e0e0e0;
+    --button-text: #000000;
+    --button-border: #333;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Apply Inter as the primary font for the whole body */
+    margin: 0;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+code, pre {
+    font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+}
+
+.hero-title, .hero-subtitle, .hero-button {
+    font-family: 'Inter', sans-serif;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh; /* Takes full viewport height */
+    background-color: var(--hero-background); /* Specific background for hero */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures image covers the circle */
+    border: 3px solid var(--text-accent);
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3); /* Subtle glow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+    .profile-picture:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+.hero-title {
+    font-size: 3.5rem; /* Larger font for main title */
+    color: var(--hero-text-primary); /* Brighter white */
+    margin-bottom: 20px;
+    font-weight: 700; /* Bold */
+}
+
+.hero-subtitle {
+    font-size: 2rem; /* Slightly larger for tagline */
+    color: var(--hero-text-secondary); /* Darker grey */
+    max-width: 1900px;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    justify-content: center;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px; /* Slightly more rounded buttons */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+    .hero-button.primary {
+        background-color: var(--text-accent); /* Accent color for primary button */
+        color: var(--button-text); /* Dark text on primary button */
+        border: 2px solid var(--text-accent);
+    }
+
+        .hero-button.primary:hover {
+            background-color: var(--hover-accent);
+            border-color: var(--hover-accent);
+            transform: translateY(-3px);
+        }
+
+    .hero-button.secondary {
+        background-color: transparent;
+        color: var(--text-light); /* Light text for secondary button */
+        border: 2px solid var(--border-color); /* Subtle border for secondary button */
+    }
+
+        .hero-button.secondary:hover {
+            background-color: rgba(255, 255, 255, 0.05); /* Slight background on hover */
+            border-color: var(--text-light); /* Light border on hover */
+            transform: translateY(-3px);
+        }
+
+.container {
+    max-width: 1100px;
+    margin: 80px auto; /* Increased top margin to separate from hero */
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    text-align: center;
+    color: var(--text-accent); /* Use accent for section titles */
+    margin-bottom: 60px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Added to allow absolute positioning of the icon button */
+    cursor: pointer; /* Indicate it's clickable for toggling details */
+}
+
+    .project-card:hover {
+        transform: translateY(-8px);
+        border: 1px solid var(--border-color-hl);
+    }
+
+/* Style for the new icon button (no changes here, keeping for completeness) */
+.project-icon-link {
+    position: absolute;
+    bottom: 15px; /* Adjust as needed */
+    right: 15px; /* Adjust as needed */
+    background-color: var(--text-accent);
+    color: var(--button-text);
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    font-size: 1.3rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+    .project-icon-link:hover {
+        background-color: var(--hover-accent);
+        transform: translateY(-3px);
+    }
+
+.project-media {
+    width: 100%;
+    height: 220px; /* Fixed height for media */
+    overflow: hidden;
+    background-color: #000; /* Placeholder for loading */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .project-media img,
+    .project-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures media fills the space without distortion */
+        display: block;
+    }
+
+.project-content {
+    /* Set relative positioning for absolute child (caret) */
+    position: relative;
+    padding: 20px 20px 60px 20px; /* Increased bottom padding to prevent overlap with caret and external link */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for the new caret icon container */
+.toggle-caret {
+    position: absolute;
+    bottom: 15px; /* Aligned with the bottom edge of the card */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for its own width to truly center */
+    color: var(--border-color); /* Initial color: same as normal project outline */
+    font-size: 1.5rem;
+    z-index: 9; /* Ensure it's above content but below the external link if they cross */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and rotation */
+}
+/* Change caret color when the project card is hovered */
+.project-card:hover .toggle-caret {
+    color: var(--border-color-hl); /* Highlight color on card hover */
+}
+    /* Add transition for smooth rotation */
+    .toggle-caret i {
+        transition: transform 0.3s ease;
+        display: block; /* Ensure transform applies correctly */
+    }
+
+/* Rotate the caret when the card is expanded */
+.project-card.is-expanded .toggle-caret i {
+    transform: rotate(180deg); /* Flips the caret upside down */
+}
+
+
+    .project-content h3 {
+        font-family: 'Monaspace Argon', 'Monaspace Neon', 'Monaspace Radon', 'Monaspace Kernel', 'Monaspace Terra', monospace;
+        color: var(--text-accent);
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+    }
+
+    .project-content p {
+        font-size: 0.95rem;
+        color: var(--text-light);
+        margin-bottom: 15px;
+        flex-grow: 1; /* Pushes button to bottom */
+    }
+
+.project-link {
+    display: inline-block;
+    background-color: var(--text-accent);
+    color: var(--button-text); /* Ensure dark text on accent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    align-self: flex-start; /* Align link to start within flex column */
+    margin-bottom: 10px; /* Space between link and new button */
+}
+
+    .project-link:hover {
+        background-color: var(--hover-accent);
+        transform: translateY(-2px);
+    }
+
+.toggle-details-button {
+    background-color: var(--card-background);
+    color: var(--text-accent);
+    border: 1px solid var(--text-accent);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+    .toggle-details-button:hover {
+        background-color: var(--text-accent);
+        color: var(--button-text);
+    }
+
+.project-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+    .project-details ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+        .project-details ul li {
+            margin-bottom: 5px;
+        }
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Smaller on mobile */
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack projects on smaller screens */
+    }
+
+    .project-card {
+        margin: 0 10px; /* Add some side margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-content p {
+        font-size: 0.85rem;
+    }
+
+    .project-icon-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .project-content {
+        padding: 15px 15px 55px 15px; /* Adjust padding for smaller screens */
+    }
+    .toggle-caret {
+        bottom: 10px; /* Adjust for smaller screens */
+        font-size: 1.2rem;
+    }
+}

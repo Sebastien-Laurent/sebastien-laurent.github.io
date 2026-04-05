@@ -21,7 +21,7 @@ const projectsData = [
                 },
                 {
                     heading: "Key Features:",
-                    items: ["3D Adventure game","Gamified CBT content", "Parental monitoring dashboard", "Reward system based on real life progress", ]
+                    items: ["3D Adventure game","Gamified CBT content", "Parental monitoring dashboard", "Reward system based on real life progress"]
                 }
             ]
         }
@@ -94,7 +94,7 @@ const projectsData = [
             sections: [
                 { heading: "Domain:", items: ["Data Science", "Game Design", "Neuroscience"] },
                 { heading: "Technologies:", items: ["Python (Pandas, NumPy, Scikit-learn)", "Unity (for game development and data capture)"] },
-			{ heading: "Key Features:", items: ["DRL-driven animation", "Adaptive locomotion", "Physics-based character control", "Robust to environmental changes"] }
+                { heading: "Key Features:", items: ["DRL-driven animation", "Adaptive locomotion", "Physics-based character control", "Robust to environmental changes"] }
             ]
         }
     },
@@ -111,7 +111,7 @@ const projectsData = [
             description: "This research project applies Principal Component Analysis (PCA) to large datasets generated from High-Performance Computing (HPC) simulations of counterflowing superfluids. PCA helps to reduce the dimensionality of complex simulation data, revealing underlying patterns and dominant modes of behavior in the turbulent interactions of the two superfluid components at high velocities, providing insights into fundamental quantum fluid dynamics.",
             sections: [
                 { heading: "Domain:", items: ["Computational Physics", "Data Science", "Fluid Dynamics", "Quantum physics"] },
-                { heading: "Technologies:", items: ["HPC environments", "C++ (for simulation code)", "Mathematica (analysis)] },
+                { heading: "Technologies:", items: ["HPC environments", "C++ (for simulation code)", "Mathematica (analysis)"] },
                 { heading: "Key Features:", items: ["Dimensionality reduction", "Visualization of complex datasets", "Identification of key physical phenomena", "Analysis of quantum turbulence"] }
             ]
         }

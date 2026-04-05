@@ -205,7 +205,7 @@ code, pre {
 /* Style for the new caret icon container */
 .toggle-caret {
     position: absolute;
-    bottom: 15px; /* Aligned with the bottom edge of the card */
+    bottom: 25px; /* Aligned with the bottom edge of the card */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for its own width to truly center */
     color: var(--border-color); /* Initial color: same as normal project outline */

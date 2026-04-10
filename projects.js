@@ -1,7 +1,7 @@
 const projectsData = [
     {
         title: "Lusha",
-        shortDescription: "Our game developed to help ADHD kids thrive, 200k+ downloads on iOS & Android",
+        shortDescription: "Our game developed to help ADHD kids thrive, 150k+ downloads on iOS & Android",
         mediaType: "image", // 'image' or 'video'
         mediaSrc: "Media/LushaLandscapeWithLogo.png",
         mediaPoster: "", // Only for video
@@ -22,6 +22,33 @@ const projectsData = [
                 {
                     heading: "Key Features:",
                     items: ["3D Adventure game","Gamified CBT content", "Parental monitoring dashboard", "Reward system based on real life progress"]
+                }
+            ]
+        }
+    },
+    {
+        title: "Nemu",
+        shortDescription: "A gamified app with relaxing sounds, stories and ambiance for sleep or focus. Prototype (iOS & Android)",
+        mediaType: "image", // 'image' or 'video'
+        mediaSrc: "Media/StormNemu.mp4",
+        mediaPoster: "", // Only for video
+        projectLink: "https://apps.apple.com/fr/app/sommeil-sons-apaisants-nemu/id6755478529",
+        projectLinkText: "Visit Lusha WebPage", // This text will no longer be visible but kept for reference
+        projectIcon: "fa-solid fa-globe", // Font Awesome class for a globe icon
+        details: {
+            description: "A small prototype released on iOS and Android to test the sleep segment. Reuses (and improve) many of the systems we use in Lusha (onboarding, paiement, remote control, cloud hosted content).",
+            sections: [
+                {
+                    heading: "Platform:",
+                    items: ["Mobile (iOS, Android)"]
+                },
+                {
+                    heading: "Technologies:",
+                    items: ["Unity, C#", "Firebase","Revenue Cat"]
+                },
+                {
+                    heading: "Key Features:",
+                    items: ["3D scenes","Multi channels sound system", "Cloud hosted content (stories, sounds)", "Gamification to encourage usage"]
                 }
             ]
         }

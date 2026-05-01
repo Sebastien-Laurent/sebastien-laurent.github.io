@@ -12,22 +12,35 @@
 </head>
 <body>
     <section id="hero">
-        <img src="Media/ProfilePic.jpeg" alt="S. Laurent Profile Picture" class="profile-picture">
-        <h1 class="hero-title"> Sébastien LAURENT projects portfolio </h1>
-        <p class="hero-subtitle">
-            Game development | Data science | AI Tooling | Physics
-        </p>
+        <div class="hero-inner">
+            <img src="Media/ProfilePic.jpeg" alt="Sébastien Laurent profile picture" class="profile-picture">
+            <div class="hero-copy">
+                <p class="hero-eyebrow">Game development · AI tooling · Data science · Physics</p>
+                <h1 class="hero-title">Sébastien Laurent</h1>
+                <p class="hero-subtitle">
+                    I build Unity commercial games and apps, development tools, and research prototypes at the intersection of science and games.
+                </p>
+                <div class="hero-actions" aria-label="Profile links">
+                    <a class="hero-button primary" href="#projects-section">View projects</a>
+                    <a class="hero-button secondary" href="https://github.com/Sebastien-Laurent" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="container">
-        <h1 class="section-title" id="projects-section">Featured Projects</h1>
+    <main class="container">
+        <div class="section-heading">
+            <p class="section-kicker">Selected work</p>
+            <h2 class="section-title" id="projects-section">Featured Projects</h2>
+            <p class="section-intro">A mix of shipped apps, internal tools, AI experiments, and research work.</p>
+        </div>
 
         <div class="projects-grid" id="projects-container">
         </div>
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; 2025 LAURENT Sébastien. All rights reserved.</p>
+        <p>&copy; 2026 Sébastien Laurent. All rights reserved.</p>
     </footer>
 
     <script src="projects.js"></script>

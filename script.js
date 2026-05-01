@@ -16,6 +16,33 @@
     const projectsContainer = document.getElementById('projects-container');
     let activeCard = null;
 
+    function generateVideoPoster(video) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+
+        if (!context) {
+            return;
+        }
+
+        const captureFrame = () => {
+            if (!video.videoWidth || !video.videoHeight) {
+                return;
+            }
+
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            video.poster = canvas.toDataURL('image/jpeg', 0.82);
+            video.currentTime = 0;
+        };
+
+        video.addEventListener('loadedmetadata', () => {
+            video.currentTime = Math.min(0.25, video.duration || 0);
+        }, { once: true });
+
+        video.addEventListener('seeked', captureFrame, { once: true });
+    }
+
     // Function to create a project card from data
     function createProjectCard(project) {
         const card = document.createElement('div');
@@ -41,6 +68,8 @@
             video.playsInline = true;
             if (project.mediaPoster) {
                 video.poster = project.mediaPoster;
+            } else {
+                generateVideoPoster(video);
             }
             const source = document.createElement('source');
             source.src = project.mediaSrc;

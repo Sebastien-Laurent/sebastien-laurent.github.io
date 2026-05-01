@@ -222,6 +222,12 @@ a {
     display: block;
 }
 
+.project-media-contain img,
+.project-media-contain video {
+    object-fit: contain;
+    background: #05070b;
+}
+
 .project-content {
     position: relative;
     padding: 20px 20px 64px;

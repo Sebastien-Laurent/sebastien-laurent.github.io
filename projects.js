@@ -35,6 +35,7 @@ const projectsData = [
         mediaType: "video", // 'image' or 'video'
         mediaSrc: "Media/StormNemu.mp4",
         mediaPoster: "", // Only for video
+        mediaFit: "contain",
         projectLink: "https://apps.apple.com/fr/app/sommeil-sons-apaisants-nemu/id6755478529",
         projectLinkText: "Visit Lusha WebPage", // This text will no longer be visible but kept for reference
         projectIcon: "fa-solid fa-globe", // Font Awesome class for a globe icon
@@ -86,6 +87,7 @@ const projectsData = [
         mediaType: "video",
         mediaSrc: "Media/BobGatheringCraftingAndBuilding.mp4",
         mediaPoster: "Media/BobGatheringCraftingAndBuildingPoster.jpg",
+        mediaFit: "contain",
         projectLink: "https://github.com/Sebastien-Laurent",
         projectLinkText: "More details",
         projectIcon: "fa-brands fa-github", // GitHub icon

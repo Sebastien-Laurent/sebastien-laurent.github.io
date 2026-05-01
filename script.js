@@ -23,6 +23,9 @@
 
         const mediaDiv = document.createElement('div');
         mediaDiv.classList.add('project-media');
+        if (project.mediaFit === 'contain') {
+            mediaDiv.classList.add('project-media-contain');
+        }
         if (project.mediaType === 'image') {
             const img = document.createElement('img');
             img.src = project.mediaSrc;

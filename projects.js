@@ -9,7 +9,7 @@ const projectsData = [
         projectLinkText: "Visit Lusha WebPage", // This text will no longer be visible but kept for reference
         projectIcon: "fa-solid fa-globe", // Font Awesome class for a globe icon
         status: "Shipped product",
-        metric: "150k+ downloads",
+        metric: "Mobile game",
         tags: ["Unity", "Mobile", "Health", "Firebase"],
         details: {
             description: "Lusha is an innovative game designed specifically to assist children with ADHD in helping them in their daily life and reinforcing their psycho socials skills (emotion management, social skills, organisation , ...). We collaborated with child psychologists and psychiatrists to deliver clinical support trough a fun and interactive experience.",
@@ -39,8 +39,8 @@ const projectsData = [
         projectLink: "https://apps.apple.com/fr/app/sommeil-sons-apaisants-nemu/id6755478529",
         projectLinkText: "Visit Lusha WebPage", // This text will no longer be visible but kept for reference
         projectIcon: "fa-solid fa-globe", // Font Awesome class for a globe icon
-        status: "Prototype",
-        metric: "iOS & Android",
+        status: "Shipped product",
+        metric: "Mobile app",
         tags: ["Unity", "Audio", "Mobile", "Firebase"],
         details: {
             description: "A small prototype released on iOS and Android to test the sleep segment. Reuses (and improve) many of the systems we use in Lusha (onboarding, paiement, remote control, cloud hosted content).",
@@ -69,7 +69,7 @@ const projectsData = [
         projectLink: "https://github.com/Sebastien-Laurent/GenAITools",
         projectLinkText: "View Repository",
         projectIcon: "fa-brands fa-github", // Font Awesome class for a GitHub icon
-        status: "Open source",
+        status: "Dev tool",
         metric: "Batch pipeline",
         tags: ["Unity", "OpenAI", "ElevenLabs", "Localization"],
         details: {
@@ -140,8 +140,7 @@ const projectsData = [
             description: "This (non-public) R&D project explores the potential of using in-game behavioral data as a non-invasive marker for assessing ADHD traits. Through carefully designed gamified tests, we analyze user interactions, response times, and decision-making patterns to identify correlations with ADHD-related cognitive functions. The goal is to develop a preliminary diagnostic tool or a supplementary assessment for clinical use.",
             sections: [
                 { heading: "Domain:", items: ["Data Science", "Game Design", "Neuroscience"] },
-                { heading: "Technologies:", items: ["Python (Pandas, NumPy, Scikit-learn)", "Unity (for game development and data capture)"] },
-                { heading: "Key Features:", items: ["DRL-driven animation", "Adaptive locomotion", "Physics-based character control", "Robust to environmental changes"] }
+                { heading: "Technologies:", items: ["Python (NumPy, Scikit-learn)", "Unity (for game development and data capture)"] }
             ]
         }
     },
@@ -151,18 +150,17 @@ const projectsData = [
         mediaType: "image",
         mediaSrc: "Media/vapPCA.png",
         mediaPoster: "",
-        projectLink: "https://github.com/Sebastien-Laurent",
+        projectLink: "https://arxiv.org/pdf/1904.07040",
         projectLinkText: "More details",
         projectIcon: "fa-solid fa-flask", // Example: a flask icon for physics/research
         status: "Research",
-        metric: "HPC analysis",
+        metric: "Numerical simulation",
         tags: ["Physics", "PCA", "C++", "Mathematica"],
         details: {
             description: "This research project applies Principal Component Analysis (PCA) to large datasets generated from High-Performance Computing (HPC) simulations of counterflowing superfluids. PCA helps to reduce the dimensionality of complex simulation data, revealing underlying patterns and dominant modes of behavior in the turbulent interactions of the two superfluid components at high velocities, providing insights into fundamental quantum fluid dynamics.",
             sections: [
                 { heading: "Domain:", items: ["Computational Physics", "Data Science", "Fluid Dynamics", "Quantum physics"] },
-                { heading: "Technologies:", items: ["HPC environments", "C++ (for simulation code)", "Mathematica (analysis)"] },
-                { heading: "Key Features:", items: ["Dimensionality reduction", "Visualization of complex datasets", "Identification of key physical phenomena", "Analysis of quantum turbulence"] }
+                { heading: "Technologies:", items: ["HPC environments", "C++ (for simulation code)", "Mathematica (analysis)"] }
             ]
         }
     }

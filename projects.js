@@ -20,7 +20,7 @@ const projectsData = [
                 },
                 {
                     heading: "Technologies:",
-                    items: ["Unity, C#", "Firebase, Python (for data analytics)","Revenue Cat"]
+                    items: ["Unity, C#", "Firebase","Python (for data analytics)","Revenue Cat"]
                 },
                 {
                     heading: "Key Features:",
@@ -43,7 +43,7 @@ const projectsData = [
         metric: "Mobile app",
         tags: ["Unity", "Audio", "Mobile", "Firebase"],
         details: {
-            description: "A small prototype released on iOS and Android to test the sleep segment. Reuses (and improve) many of the systems we use in Lusha (onboarding, paiement, remote control, cloud hosted content).",
+            description: "A small prototype released on iOS and Android to test the sleep segment. Reuses (and improve) many of the systems we use in Lusha (onboarding, payment, remote control, cloud hosted content).",
             sections: [
                 {
                     heading: "Platform:",
@@ -61,23 +61,23 @@ const projectsData = [
         }
     },
     {
-        title: "Batch text and audio AI generation tool",
-        shortDescription: "A Unity app to perform batch audio and text translation AI generation using Eleven labs and Open AI APIs",
-        mediaType: "image",
-        mediaSrc: "Media/AudioTool.png",
-        mediaPoster: "",
-        projectLink: "https://github.com/Sebastien-Laurent/GenAITools",
-        projectLinkText: "View Repository",
-        projectIcon: "fa-brands fa-github", // Font Awesome class for a GitHub icon
-        status: "Dev tool",
-        metric: "Batch pipeline",
-        tags: ["Unity", "OpenAI", "ElevenLabs", "Localization"],
+        title: "Animation generation using deep reinforcement learning",
+        shortDescription: "An application of deep reinforcement learning to teach an humanoid agent how to walk in order to synthesize realistic and adaptive animations.",
+        mediaType: "video",
+        mediaSrc: "Media/LucyProgramSimulationExample.mp4",
+        mediaPoster: "Media/LucyProgramSimulationExamplePoster.jpg",
+        projectLink: "https://github.com/Sebastien-Laurent",
+        projectLinkText: "More details",
+        projectIcon: "fa-brands fa-github", // GitHub icon
+        status: "Research",
+        metric: "DRL locomotion",
+        tags: ["Python", "ML-Agents", "Physics", "Animation"],
         details: {
-            description: "This Unity-based application streamlines the process of generating localized audio and text content using leading AI services. It integrates with Eleven Labs for high-quality text-to-speech synthesis and OpenAI's API for efficient text translation, allowing for batch processing of large datasets, ideal for game localization or content creation pipelines.",
+            description: "I investigate how deep reinforcement learning (DRL) can help us create adaptive animations. By training an agent within a simulated environment, it learns to walk, navigate obstacles, and adapt its gait to various terrains, offering an interesting approach to procedural animation generation for games and virtual realities.",
             sections: [
-                { heading: "Platform:", items: ["Desktop (Unity Editor)"] },
-                { heading: "Technologies:", items: ["Unity, C#", "Eleven Labs API, OpenAI API"] },
-                { heading: "Key Features:", items: ["Batch processing","Customizable context", "Customizable voice parameters"] }
+                { heading: "Platform:", items: ["Research/Simulation"] },
+                { heading: "Technologies:", items: ["Python", "TensorFlow/PyTorch", "Unity ML-Agents"] },
+                { heading: "Key Features:", items: ["DRL-driven animation", "Adaptive locomotion", "Physics-based character control", "Robust to environmental changes"] }
             ]
         }
     },
@@ -104,27 +104,6 @@ const projectsData = [
         }
     },
     {
-        title: "Animation generation using deep reinforcement learning",
-        shortDescription: "An application of deep reinforcement learning to teach an humanoid agent how to walk in order to synthesize realistic and adaptive animations.",
-        mediaType: "video",
-        mediaSrc: "Media/LucyProgramSimulationExample.mp4",
-        mediaPoster: "Media/LucyProgramSimulationExamplePoster.jpg",
-        projectLink: "https://github.com/Sebastien-Laurent",
-        projectLinkText: "More details",
-        projectIcon: "fa-brands fa-github", // GitHub icon
-        status: "Research",
-        metric: "DRL locomotion",
-        tags: ["Python", "ML-Agents", "Physics", "Animation"],
-        details: {
-            description: "I investigate how deep reinforcement learning (DRL) can help us create adaptive animations. By training an agent within a simulated environment, it learns to walk, navigate obstacles, and adapt its gait to various terrains, offering an interesting approach to procedural animation generation for games and virtual realities.",
-            sections: [
-                { heading: "Platform:", items: ["Research/Simulation"] },
-                { heading: "Technologies:", items: ["Python", "TensorFlow/PyTorch", "Unity ML-Agents"] },
-                { heading: "Key Features:", items: ["DRL-driven animation", "Adaptive locomotion", "Physics-based character control", "Robust to environmental changes"] }
-            ]
-        }
-    },
-    {
         title: "In game behavior as a marker for ADHD",
         shortDescription: "A R&D initiative to evaluate the potential of using a series of gamified tests as marker for ADHD",
         mediaType: "image",
@@ -144,9 +123,30 @@ const projectsData = [
             ]
         }
     },
+        {
+        title: "Batch text and audio AI generation tool",
+        shortDescription: "A Unity app to perform batch audio and text translation AI generation using Eleven labs and Open AI APIs",
+        mediaType: "image",
+        mediaSrc: "Media/AudioTool.png",
+        mediaPoster: "",
+        projectLink: "https://github.com/Sebastien-Laurent/GenAITools",
+        projectLinkText: "View Repository",
+        projectIcon: "fa-brands fa-github", // Font Awesome class for a GitHub icon
+        status: "Dev tool",
+        metric: "Batch pipeline",
+        tags: ["Unity", "OpenAI", "ElevenLabs", "Localization"],
+        details: {
+            description: "This Unity-based application streamlines the process of generating localized audio and text content using leading AI services. It integrates with Eleven Labs for high-quality text-to-speech synthesis and OpenAI's API for efficient text translation, allowing for batch processing of large datasets, ideal for game localization or content creation pipelines.",
+            sections: [
+                { heading: "Platform:", items: ["Desktop (Unity Editor)"] },
+                { heading: "Technologies:", items: ["Unity, C#", "Eleven Labs API, OpenAI API"] },
+                { heading: "Key Features:", items: ["Batch processing","Customizable context", "Customizable voice parameters"] }
+            ]
+        }
+    },
     {
-        title: "PCA applied to an HPC simulation of counterflowing superfluids",
-        shortDescription: "PCA unravels the complex dynamics at play when two superfluids are counterflowing at large velocity",
+        title: "Simulation of counterflowing superfluids",
+        shortDescription: "We numerically unravel the complex dynamics at play when two superfluids are counterflowing at large velocity",
         mediaType: "image",
         mediaSrc: "Media/vapPCA.png",
         mediaPoster: "",

@@ -24,7 +24,7 @@ const projectsData = [
                 },
                 {
                     heading: "Key Features:",
-                    items: ["3D Adventure game","Gamified CBT content", "Parental monitoring dashboard", "Reward system based on real life progress"]
+                    items: ["Vast 3D Adventure game","Gamified CBT content", "Parental monitoring dashboard", "Reward system based on real life progress"]
                 }
             ]
         }
@@ -43,7 +43,7 @@ const projectsData = [
         metric: "Mobile app",
         tags: ["Unity", "Audio", "Mobile", "Firebase"],
         details: {
-            description: "A small prototype released on iOS and Android to test the sleep segment. Reuses (and improve) many of the systems we use in Lusha (onboarding, payment, remote control, cloud hosted content).",
+            description: "A small prototype released on iOS and Android to test the sleep app segment. The goal was to give a relaxing experience trough immersives scenes that can be customized by the player (island, temple, bedroom). The player can compose its sound environment and can enjoy a fully customized mix of sounds , music and stories.  Reuses (and improve) many of the systems we use in Lusha (onboarding, payment, remote control, cloud hosted content).",
             sections: [
                 {
                     heading: "Platform:",

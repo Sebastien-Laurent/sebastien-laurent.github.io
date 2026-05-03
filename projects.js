@@ -11,6 +11,28 @@ const projectsData = [
         status: "Shipped product",
         metric: "Mobile game",
         tags: ["Unity", "Mobile", "Health", "Firebase"],
+        gallery: [
+            {
+                src: "Media/LushaScreenshot.png",
+                alt: "Lusha gameplay screenshot",
+                fit: "contain"
+            },
+            {
+                src: "Media/Lusha_screenshot6.jpeg",
+                alt: "Lusha gameplay screenshot",
+                fit: "contain"
+            },
+            {
+                src: "Media/Lusha_screenshot5.jpeg",
+                alt: "Rewards obtained after routine completion",
+                fit: "contain"
+            },
+            {
+                src: "Media/Lusha_screenshot1.jpeg",
+                alt: "Lusha routine dashboard",
+                fit: "contain"
+            }
+        ],
         details: {
             description: "Lusha is an innovative game designed specifically to assist children with ADHD in helping them in their daily life and reinforcing their psycho socials skills (emotion management, social skills, organisation , ...). We collaborated with child psychologists and psychiatrists to deliver clinical support trough a fun and interactive experience.",
             sections: [

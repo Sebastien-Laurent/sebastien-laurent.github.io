@@ -120,6 +120,35 @@
         fullDescription.textContent = project.details.description;
         detailsDiv.appendChild(fullDescription);
 
+        if (project.gallery && project.gallery.length > 0) {
+            const gallery = document.createElement('div');
+            gallery.classList.add('project-gallery');
+
+            project.gallery.forEach(galleryItem => {
+                const figure = document.createElement('figure');
+                figure.classList.add('project-gallery-item');
+                if (galleryItem.fit === 'contain') {
+                    figure.classList.add('project-gallery-item-contain');
+                }
+
+                const image = document.createElement('img');
+                image.src = galleryItem.src;
+                image.alt = galleryItem.alt || `${project.title} gallery image`;
+                image.loading = "lazy";
+                figure.appendChild(image);
+
+                if (galleryItem.caption) {
+                    const caption = document.createElement('figcaption');
+                    caption.textContent = galleryItem.caption;
+                    figure.appendChild(caption);
+                }
+
+                gallery.appendChild(figure);
+            });
+
+            detailsDiv.appendChild(gallery);
+        }
+
         project.details.sections.forEach(section => {
             const heading = document.createElement('h4');
             heading.textContent = section.heading;
@@ -213,7 +242,7 @@
     // Toggle project details when clicking on the project card.
     document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('click', function (event) {
-            if (event.target.closest('a, video, button')) {
+            if (event.target.closest('a, video, button, .project-gallery')) {
                 return;
             }
 

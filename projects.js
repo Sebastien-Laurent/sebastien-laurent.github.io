@@ -126,6 +126,28 @@ const projectsData = [
         }
     },
     {
+        title: "C++ optimization examples",
+        shortDescription: "A public collection of focused C++ examples demonstrating practical performance optimization techniques.",
+        mediaType: "video",
+        mediaSrc: "Media/2DParticlesSimulation.mp4",
+        mediaPoster: "",
+        mediaFit: "contain",
+        projectLink: "https://github.com/Sebastien-Laurent/Cpp-Optimization-examples",
+        projectLinkText: "View Repository",
+        projectIcon: "fa-brands fa-github",
+        status: "Public repo",
+        metric: "Performance examples",
+        tags: ["C++", "Optimization", "Raylib", "Simulation"],
+        details: {
+            description: "This repository gathers small educational C++ examples that make optimization tradeoffs visible, from aliasing and quaternion interpolation to data-oriented particle updates and an interactive raylib particle simulation.",
+            sections: [
+                { heading: "Platform:", items: ["Native C++ examples", "Interactive raylib simulation"] },
+                { heading: "Technologies:", items: ["C++", "raylib", "Makefile"] },
+                { heading: "Key Features:", items: ["Restrict aliasing benchmark", "SLERP vs NLERP comparison", "ECS-style SoA vs object/AoS particles", "Switchable collision detection approaches"] }
+            ]
+        }
+    },
+    {
         title: "In game behavior as a marker for ADHD",
         shortDescription: "A R&D initiative to evaluate the potential of using a series of gamified tests as marker for ADHD",
         mediaType: "image",

@@ -126,6 +126,28 @@ const projectsData = [
         }
     },
     {
+        title: "The Cauldron Challenge",
+        shortDescription: "A playable raylib C++ game featuring spatial-grid collision optimization from my C++ optimization examples.",
+        mediaType: "video",
+        mediaSrc: "Media/CauldronSimulator.mp4",
+        mediaPoster: "",
+        mediaFit: "contain",
+        projectLink: "https://cauldronchallenge.itch.io/thecauldronchallenge",
+        projectLinkText: "Play Demo",
+        projectIcon: "fa-brands fa-itch-io",
+        status: "Playable demo",
+        metric: "C++ game",
+        tags: ["C++", "raylib", "Game Development", "Optimization"],
+        details: {
+            description: "The Cauldron Challenge is a game built in C++ with raylib, with a playable demo available on itch.io. It also puts one of the techniques from my C++ optimization examples into a real game context: a spatial grid that accelerates collision detection.",
+            sections: [
+                { heading: "Platform:", items: ["Playable demo on itch.io"] },
+                { heading: "Technologies:", items: ["C++", "raylib"] },
+                { heading: "Key Features:", items: ["Real-time gameplay", "Spatial-grid collision detection", "Practical application of a reusable optimization technique"] }
+            ]
+        }
+    },
+    {
         title: "C++ optimization examples",
         shortDescription: "A public collection of focused C++ examples demonstrating practical performance optimization techniques.",
         mediaType: "video",

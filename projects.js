@@ -189,7 +189,7 @@ const projectsData = [
             ]
         }
     },
-        {
+    {
         title: "Batch text and audio AI generation tool",
         shortDescription: "A Unity app to perform batch audio and text translation AI generation using Eleven labs and Open AI APIs",
         mediaType: "image",
@@ -227,6 +227,32 @@ const projectsData = [
             sections: [
                 { heading: "Domain:", items: ["Computational Physics", "Data Science", "Fluid Dynamics", "Quantum physics"] },
                 { heading: "Technologies:", items: ["HPC environments", "C++ (for simulation code)", "Mathematica (analysis)"] }
+            ]
+        }
+    },
+        {
+        title: "Scientific image prize",
+        shortDescription: "During my PhD, I won a photography prize: Prix de l'image scientifique DIM Nano-K 2015.",
+        mediaType: "image",
+        mediaSrc: "Media/LithiumExperiment.jpeg",
+        mediaPoster: "",
+        projectLink: "https://web.archive.org/web/20160629204447/https://cnanoidf.org/fr/le-c-nano-idf/prix/article/prix-de-l-image-scientifique-dim",
+        projectLinkText: "View prize webpage",
+        projectIcon: "fa-solid fa-award",
+        status: "Award",
+        metric: "Scientific photography",
+        tags: ["Photography", "PhD", "Physics", "Cold atoms"],
+        details: {
+            description: [
+                "During my PhD, I won the Prix de l'image scientifique DIM Nano-K 2015 for this photo.",
+                "Text submitted with the photo:",
+                "Le nouvel homme des cavernes",
+                "L’homme des cavernes moderne est bien différent de celui d’antan. Dans la pénombre de sa cave, éclairé par les mille et uns éclats des lasers et écrans qui composent la pièce, il ne s’applique non pas à peindre sa dernière chasse mais à freiner le mouvement. Celui de milliers d’atomes qui lévitent dans le vide. En jouant avec le clair et l’obscur, il stoppe petit à petit les mouvements microscopiques de cette assemblée jusqu’à ce que sa température ne soit plus que de quelques milliardièmes de degrés au dessus du zéro absolu. Paradoxalement, c’est avec des grains de lumière qu’il réussit cela, non pas ceux du soleil mais ceux issus de plusieurs faisceaux lasers aux caractéristiques bien choisies.",
+                "Le feu, l’eau, la glace, le nouvel homme des cavernes croit connaître cela sur le bout des doigts. La condensation de Bose-Einstein, la supraconductivité, la superfluidité, il comprend cela moins bien et veut en connaître toutes les facettes. Ses atomes ultra-froids apprivoisés dans une cage de lumière lui permettent de réaliser ces nouvelles phases de la matière et de jouer avec elles sans fin."
+            ],
+            sections: [
+                { heading: "Prize:", items: ["Prix de l'image scientifique DIM Nano-K 2015"] },
+                { heading: "Context:", items: ["PhD research", "Cold-atom experiment photography"] }
             ]
         }
     }

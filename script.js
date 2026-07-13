@@ -116,9 +116,14 @@
         detailsDiv.classList.add('project-details');
         detailsDiv.style.display = 'none'; // Ensure it's hidden by default
 
-        const fullDescription = document.createElement('p');
-        fullDescription.textContent = project.details.description;
-        detailsDiv.appendChild(fullDescription);
+        const descriptions = Array.isArray(project.details.description)
+            ? project.details.description
+            : [project.details.description];
+        descriptions.forEach(descriptionText => {
+            const fullDescription = document.createElement('p');
+            fullDescription.textContent = descriptionText;
+            detailsDiv.appendChild(fullDescription);
+        });
 
         if (project.gallery && project.gallery.length > 0) {
             const gallery = document.createElement('div');

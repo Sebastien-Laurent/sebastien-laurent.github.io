@@ -129,7 +129,7 @@ const projectsData = [
         title: "The Cauldron Challenge",
         shortDescription: "A playable raylib C++ game featuring spatial-grid collision optimization from my C++ optimization examples.",
         mediaType: "video",
-        mediaSrc: "Media/CauldronSimulator.mp4",
+        mediaSrc: "Media/CauldronChallengeExtrait.mp4",
         mediaPoster: "",
         mediaFit: "contain",
         projectLink: "https://cauldronchallenge.itch.io/thecauldronchallenge",
